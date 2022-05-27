@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UF3M5Projecte2">
+  <ClassDiagramComponents>
+    <Class name="Llibre" package="" visibility="public" xPosition="734.0" yPosition="166.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="tipus" type="String" visibility="private"/>
+        <Field name="editorial" type="String" visibility="private"/>
+        <Field name="any" type="Date" visibility="private"/>
+        <Field name="autor" type="String" visibility="private"/>
+        <Field name="identificador" type="String" visibility="private"/>
+        <Field name="estat" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Lector" package="" visibility="public" xPosition="1078.0" yPosition="253.0">
+      <Fields>
+        <Field name="quantitat_llibres" type="Int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="LLibreria" package="" visibility="public" xPosition="734.0" yPosition="519.0">
+      <Fields>
+        <Field name="Llibre" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Autor" package="" visibility="public" xPosition="424.0" yPosition="204.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="nacionalitat" type="String" visibility="private"/>
+        <Field name="data_naixement" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Te" source="Llibre" target="Lector" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="Te" source="Llibre" target="Autor" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
